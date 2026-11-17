@@ -1,47 +1,124 @@
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Portfolio</title>
             <link rel="stylesheet" href="portfolio.css">
-
+                <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
     <header>
-        <h2>My Portfolio</h2>
+        <h2 class = "logo">My Portfolio<span>.</span></h2>
         <nav>
-            <a href="home.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="skills.html">Skills</a>
-            <a href="contact.html">Contact</a>
-            <a href="project.html">Project</a>
+            <a href="home.html"><i class="fa-solid fa-house"></i>Home</a>
+            <a href="about.html"><i class="fa-solid fa-user"></i>About</a>
+            <a href="skills.html"><i class="fa-solid fa-code"></i>Skills</a>
+            <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+            <a href="project.html"><i class="fa-solid fa-folder-open"></i>Project</a>
 
         </nav>
     </header>
 
     <section id="home">
+          <div class="home-content">
         <img src="c:\Users\Rachna_Chaurasia\Downloads\WhatsApp Image 2026-11-17 at 17.19.00.jpeg"/>
         <h1>Hello, I'm Rachna</h1>
         <h3> Web Developer</h3>
         <p>Welcome to my personal portfolio website.</p>
-        <button>Download CV</button>
+         <div class="social-icons">
+  <a href="https://github.com/rachnachaurasia2006-wq"
+                   target="_blank" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+                <a href="mailto:rachna.chaurasia2006@gmail.com"
+                   aria-label="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+
+            </div>
+             <a href="#" class="btn">
+                <i class="fa-solid fa-download"></i> Download CV
+            </a>
+
+        </div>
     </section>
 
     <section id="about">
-        <h2>About Me</h2>
+        <h2><i class="fa-solid fa-user"></i> About <span>Me</span></h2>
+
+        <div class="about-card">
+
         <p>I'm a BCA 2nd-year student passionate about web development and programming.
              I enjoy creating responsive websites and learning new technologies..</p>
-    </section>
+   </div>
+ </section>
 
     <section id="skills">
-        <h2>My Skills</h2>
-        <p>HTML | CSS | JavaScript | Java | PHP | MySQL</p>
+          <h2><i class="fa-solid fa-code"></i> My <span>Skills</span></h2>
+
+        <div class="skills-container">
+              <div class="skill-box">
+                <i class="fa-brands fa-html5"></i>
+                <h3>HTML</h3>
+            </div>
+
+            <div class="skill-box">
+                <i class="fa-brands fa-css3-alt"></i>
+                <h3>CSS</h3>
+            </div>
+
+            <div class="skill-box">
+                <i class="fa-brands fa-js"></i>
+                <h3>JavaScript</h3>
+            </div>
+
+            <div class="skill-box">
+                <i class="fa-brands fa-java"></i>
+                <h3>Java</h3>
+            </div>
+
+            <div class="skill-box">
+                <i class="fa-brands fa-php"></i>
+                <h3>PHP</h3>
+            </div>
+
+            <div class="skill-box">
+                <i class="fa-solid fa-database"></i>
+                <h3>MySQL</h3>
+            </div>
+
+        </div>
     </section>
 
     <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: rachna.chaurasia2006@gmail.com</p>
-        <p>GitHub: ="https://github.com/rachnachaurasia2006-wq"</p>
-    </section>
+         <h2><i class="fa-solid fa-envelope"></i> Contact <span>Me</span></h2>
 
+        <div class="contact-card">
+
+          <p>
+                <i class="fa-solid fa-envelope"></i>
+                Email: rachna.chaurasia2006@gmail.com
+            </p>
+
+            <p>
+                <i class="fa-brands fa-github"></i>
+                GitHub:
+                <a href="https://github.com/rachnachaurasia2006-wq"
+                   target="_blank">
+                    Visit My GitHub
+                </a>
+            </p>
+
+        </div>
+
+        <a href="mailto:rachna.chaurasia2006@gmail.com" class="btn">
+            <i class="fa-solid fa-paper-plane"></i> Send Message
+        </a>
+    </section>
+  <footer>
+        <p>© 2026 My Personal Portfolio | All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
