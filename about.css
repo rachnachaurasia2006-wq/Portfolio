@@ -1,0 +1,86 @@
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+/* Body */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a, #312e81);
+    color: white;
+    padding: 60px 20px;
+}
+
+/* Main Heading */
+h1 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 40px;
+    color: #38bdf8;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Profile Image */
+img {
+    display: block;
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 30px;
+    border: 5px solid #38bdf8;
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.5);
+}
+
+/* About Me Content */
+p {
+    max-width: 850px;
+    margin: 15px auto;
+    padding: 17px 22px;
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    font-size: 17px;
+    line-height: 1.8;
+    text-align: justify;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease;
+}
+
+/* Hover Effect */
+p:hover {
+    transform: translateY(-5px);
+    background: rgba(56, 189, 248, 0.15);
+    border-color: #38bdf8;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+
+    body {
+        padding: 35px 15px;
+    }
+
+    h1 {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    img {
+        width: 150px;
+        height: 150px;
+    }
+
+    p {
+        font-size: 15px;
+        padding: 14px;
+        text-align: left;
+    }
+}
+
+
