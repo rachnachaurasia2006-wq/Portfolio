@@ -700,3 +700,223 @@ nav a i {
 nav a:hover i {
     transform: scale(1.2);
 }
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Mobile Menu Icon */
+.menu-icon {
+    display: none;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Navigation Links */
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.navbar a {
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover {
+    color: cyan;
+    transform: translateY(-3px);
+}
+
+/* Theme Toggle Button */
+#themeToggle {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+/* Dark Mode */
+body.dark {
+    background-color: #121212;
+    color: white;
+    transition: 0.3s ease;
+}
+
+body.dark header,
+body.dark footer {
+    background-color: #1e1e1e;
+}
+
+body.dark .about-card,
+body.dark .contact-card,
+body.dark .skill-box {
+    background-color: #252525;
+    color: white;
+}
+
+body.dark section h2,
+body.dark section h3,
+body.dark section p {
+    color: white;
+}
+    body.dark .about-card,
+body.dark .contact-card,
+body.dark .skill-box {
+    border-color: #444;
+}
+
+body.dark .navbar {
+    background-color: #1e1e1e;
+}
+
+body.dark #themeToggle {
+    color: white;
+}
+
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        padding: 15px 20px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .menu-icon {
+        display: block;
+        order: 2;
+    }
+
+    #themeToggle {
+        order: 3;
+        margin-left: 10px;
+    }
+
+    /* Hide menu initially */
+    .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #222;
+        padding: 15px 0;
+        gap: 15px;
+        text-align: center;
+        z-index: 1000;
+    }
+
+    /* Display menu when clicked */
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        display: block;
+        color: white;
+        padding: 10px;
+    }
+
+    /* Home Section */
+    #home {
+        padding: 40px 15px;
+        text-align: center;
+    }
+
+    .home-content img {
+        max-width: 180px;
+        width: 100%;
+        height: auto;
+    }
+
+    .home-content h1 {
+        font-size: 28px;
+    }
+
+    /* Other Sections */
+    section {
+        padding: 40px 15px;
+        text-align: center;
+    }
+
+    .about-card,
+    .contact-card {
+        width: 95%;
+        margin: auto;
+        box-sizing: border-box;
+    }
+
+    /* Skills Section */
+    .skills-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .skill-box {
+        padding: 15px;
+    }
+
+    /* Footer */
+    footer {
+        text-align: center;
+        padding: 15px;
+        font-size: 14px;
+    }
+}
+
+/* Small Mobile Screens */
+@media screen and (max-width: 480px) {
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .home-content h1 {
+        font-size: 24px;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+}
+/* Scroll Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Card Animation */
+.about-card,
+.skill-box,
+.contact-card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about-card:hover,
+.skill-box:hover,
+.contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
