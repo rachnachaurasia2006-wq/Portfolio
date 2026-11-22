@@ -139,3 +139,81 @@ body {
         font-size: 15px;
     }
 }
+/* Contact Form */
+.contact-form {
+    max-width: 500px;
+    width: 90%;
+    margin: 25px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.contact-form textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid #00bcd4;
+    border-color: #00bcd4;
+}
+
+.contact-form button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #222;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #00bcd4;
+    transform: translateY(-3px);
+}
+
+/* Validation Messages */
+.error {
+    color: #e53935;
+    font-size: 13px;
+}
+
+.success-message {
+    color: green;
+    text-align: center;
+}
+
+/* Dark Mode Contact Form */
+body.dark .contact-form input,
+body.dark .contact-form textarea {
+    background: #252525;
+    color: white;
+    border-color: #555;
+}
+
+body.dark .contact-form button {
+    background: #00bcd4;
+    color: #111;
+}
+
+/* Mobile Form */
+@media screen and (max-width: 480px) {
+    .contact-form {
+        width: 100%;
+    }
+}
