@@ -8,7 +8,36 @@
 
 </head>
 <body>
+<form class="contact-form" id="contactForm">
 
+    <input
+        type="text"
+        id="name"
+        placeholder="Enter Your Name"
+    >
+    <span class="error" id="nameError"></span>
+
+    <input
+        type="email"
+        id="email"
+        placeholder="Enter Your Email"
+    >
+    <span class="error" id="emailError"></span>
+
+    <textarea
+        id="message"
+        placeholder="Enter Your Message"
+    ></textarea>
+    <span class="error" id="messageError"></span>
+
+    <button type="submit">
+        <i class="fa-solid fa-paper-plane"></i>
+        Submit
+    </button>
+
+    <p id="successMessage" class="success-message"></p>
+
+</form>
     <section class="contact">
 
         <h1>Contact <span>Me</span></h1>
@@ -52,4 +81,57 @@
     </section>
 
 </body>
+<script>
+
+// Contact Form Validation
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    let valid = true;
+
+    // Clear previous errors
+    document.getElementById("nameError").textContent = "";
+    document.getElementById("emailError").textContent = "";
+    document.getElementById("messageError").textContent = "";
+    document.getElementById("successMessage").textContent = "";
+
+    // Name Validation
+    if (name.length < 3) {
+        document.getElementById("nameError").textContent =
+            "Please enter at least 3 characters.";
+        valid = false;
+    }
+
+    // Email Validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailPattern.test(email)) {
+        document.getElementById("emailError").textContent =
+            "Please enter a valid email address.";
+        valid = false;
+    }
+
+    // Message Validation
+    if (message.length < 10) {
+        document.getElementById("messageError").textContent =
+            "Message must contain at least 10 characters.";
+        valid = false;
+    }
+
+    // Success Message
+    if (valid) {
+        document.getElementById("successMessage").textContent =
+            "Thank you! Your form is validated successfully.";
+
+        document.getElementById("contactForm").reset();
+    }
+
+});
+
+</script>
 </html>
