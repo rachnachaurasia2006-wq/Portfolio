@@ -920,3 +920,442 @@ body.dark #themeToggle {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
+/* EDUCATION SECTION */
+
+#education {
+    background: #111827;
+}
+
+.education-container {
+    max-width: 750px;
+    margin: auto;
+}
+
+.education-card {
+    background: #1e293b;
+    padding: 35px;
+    border: 1px solid #38bdf8;
+    border-radius: 15px;
+    transition: 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 5px 25px rgba(56, 189, 248, 0.3);
+}
+
+.education-icon {
+    font-size: 45px;
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+
+.education-card h3 {
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+
+.education-card p {
+    color: #cbd5e1;
+    margin: 8px 0;
+}
+/* FIXED NAVIGATION BAR */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 15px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: nowrap;
+}
+
+.navbar a {
+    display: inline-block;
+    white-space: nowrap;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 3px;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #38bdf8;
+    transform: translateY(-3px);
+}
+
+/* Mobile Navigation */
+
+@media screen and (max-width: 768px) {
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        background: #222;
+        padding: 15px;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    #themeToggle {
+        margin-left: auto;
+    }
+}
+/* Education Navigation Fix */
+
+.navbar a[href="education.html"] {
+    display: inline-flex !important;
+    align-items: center;
+    visibility: visible !important;
+    opacity: 1 !important;
+    color: white !important;
+    white-space: nowrap;
+}
+
+.navbar a[href="education.html"] i {
+    display: inline-block !important;
+    visibility: visible !important;
+    color: #38bdf8 !important;
+    margin-right: 6px;
+}
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Education Section */
+.education-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.education-card {
+    width: 80%;
+    max-width: 650px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 15px;
+    background: rgba(0, 150, 255, 0.08);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: 0.4s;
+}
+
+.education-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,150,255,0.25);
+}
+
+.education-icon {
+    font-size: 45px;
+    color: #00aaff;
+    margin-bottom: 15px;
+}
+
+/* Projects Section */
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.project-card {
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(0, 150, 255, 0.08);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: 0.4s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,150,255,0.25);
+}
+
+.project-icon {
+    font-size: 40px;
+    color: #00aaff;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0 20px;
+}
+
+.tech-tags span {
+    padding: 7px 13px;
+    border-radius: 20px;
+    background: #00aaff;
+    color: white;
+    font-size: 13px;
+}
+
+.project-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.project-btn {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 25px;
+    background: #00aaff;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.project-btn:hover {
+    background: #0077cc;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    .education-card {
+        width: 90%;
+    }
+
+    .project-card {
+        padding: 22px;
+    }
+
+}
+/* Dark Mode - Education and Projects */
+body.dark .education-card,
+body.dark .project-card {
+    background: #1e293b;
+    color: white;
+}
+
+body.dark .education-card p,
+body.dark .project-card p {
+    color: #ddd;
+}
+
+body.dark .education-card h3,
+body.dark .project-card h3 {
+    color: #fff;
+}
+
+/* ============================= */
+/* PROJECTS SECTION */
+/* ============================= */
+
+#projects {
+    background: #0b1120;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.project-card {
+    background: #1e293b;
+    padding: 30px;
+    border: 1px solid #263449;
+    border-radius: 18px;
+    text-align: left;
+    transition: 0.4s ease;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    border-color: #38bdf8;
+    box-shadow: 0 8px 25px rgba(56,189,248,0.2);
+}
+
+.project-icon {
+    font-size: 45px;
+    color: #38bdf8;
+    margin-bottom: 18px;
+}
+
+.project-card h3 {
+    color: #38bdf8;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    color: #cbd5e1;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.project-card h4 {
+    margin-top: 20px;
+    color: white;
+}
+
+/* Technology Tags */
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0 20px;
+}
+
+.tech-tags span {
+    background: #263b50;
+    color: #38bdf8;
+    padding: 7px 13px;
+    border: 1px solid #38bdf8;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+/* Project Buttons */
+
+.project-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.project-btn {
+    display: inline-block;
+    padding: 10px 18px;
+    background: #38bdf8;
+    color: #0b1120;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.project-btn:hover {
+    background: white;
+    color: #0b1120;
+    transform: translateY(-4px);
+}
+
+/* ============================= */
+/* DARK MODE */
+/* ============================= */
+
+body.dark .project-card,
+body.dark .education-card {
+    background: #252525;
+    color: white;
+}
+
+body.dark .project-card p,
+body.dark .education-card p {
+    color: #ddd;
+}
+
+body.dark .project-card h3,
+body.dark .project-card h4,
+body.dark .education-card h3 {
+    color: #38bdf8;
+}
+
+/* ============================= */
+/* RESPONSIVE DESIGN */
+/* ============================= */
+
+@media screen and (max-width: 768px) {
+
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        padding: 25px;
+    }
+
+    .project-buttons {
+        gap: 10px;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .project-card {
+        padding: 20px;
+    }
+
+    .project-card h3 {
+        font-size: 19px;
+    }
+
+    .project-btn {
+        padding: 9px 13px;
+        font-size: 13px;
+    }
+
+}
+.btn i {
+    margin-right: 8px;
+}
+
+.btn:hover i {
+    transform: translateY(-2px);
+}
+.navbar a[href="#education"] {
+    display: inline-flex;
+    align-items: center;
+    visibility: visible;
+    opacity: 1;
+    color: white;
+    white-space: nowrap;
+}
