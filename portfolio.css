@@ -1019,34 +1019,23 @@ header {
         display: flex;
     }
 
-    .navbar a {
-        display: block;
-        width: 100%;
-        text-align: center;
-        font-size: 15px;
-    }
+    
+.navbar a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    color: white;
+}
+
 
     #themeToggle {
         margin-left: auto;
     }
 }
-/* Education Navigation Fix */
 
-.navbar a[href="education.html"] {
-    display: inline-flex !important;
-    align-items: center;
-    visibility: visible !important;
-    opacity: 1 !important;
-    color: white !important;
-    white-space: nowrap;
-}
-
-.navbar a[href="education.html"] i {
-    display: inline-block !important;
-    visibility: visible !important;
-    color: #38bdf8 !important;
-    margin-right: 6px;
-}
 /* Smooth Scrolling */
 html {
     scroll-behavior: smooth;
@@ -1350,12 +1339,4 @@ body.dark .education-card h3 {
 
 .btn:hover i {
     transform: translateY(-2px);
-}
-.navbar a[href="#education"] {
-    display: inline-flex;
-    align-items: center;
-    visibility: visible;
-    opacity: 1;
-    color: white;
-    white-space: nowrap;
 }
